@@ -1,0 +1,1246 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meta Reklam Hizmetleri | Profesyonel Meta Reklamcılığı</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        :root {
+            --main-color: #a23f2e;
+            --secondary-color: #627b6f;
+            --bg-color: #dde2e6;
+            --white: #ffffff;
+            --dark: #333333;
+            --spacing-sm: 8px;
+            --spacing-md: 16px;
+            --spacing-lg: 24px;
+            --spacing-xl: 32px;
+            --border-radius: 8px;
+            --transition: all 0.3s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            color: var(--dark);
+            background-color: var(--bg-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-lg);
+        }
+        
+        /* Typography */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        p {
+            font-size: 1rem;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            background-color: var(--main-color);
+            color: var(--white);
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 500;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background-color: #8a3526;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #526a5f;
+        }
+        
+        .btn-large {
+            padding: 16px 32px;
+            font-size: 1.1rem;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--spacing-md) 0;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--main-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: var(--spacing-sm);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: var(--spacing-xl);
+        }
+        
+        .nav-links a {
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover {
+            color: var(--main-color);
+        }
+        
+        .mobile-toggle {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding-top: 120px;
+            padding-bottom: var(--spacing-xl);
+            background-color: var(--bg-color);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .hero-text {
+            flex: 1;
+            min-width: 300px;
+            margin-right: var(--spacing-xl);
+        }
+        
+        .hero-text h1 {
+            color: var(--main-color);
+            font-size: 3rem;
+            line-height: 1.2;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .hero-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Features Section */
+        .features {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: var(--spacing-xl);
+        }
+        
+        .section-title h2 {
+            color: var(--main-color);
+            position: relative;
+            display: inline-block;
+            padding-bottom: var(--spacing-md);
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .feature-card {
+            background-color: var(--bg-color);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--main-color);
+            margin-bottom: var(--spacing-md);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--bg-color);
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: var(--spacing-lg);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .service-content {
+            padding: var(--spacing-lg);
+        }
+        
+        .service-title {
+            color: var(--main-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+        
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .testimonial-card {
+            background-color: var(--bg-color);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-content {
+            margin-bottom: var(--spacing-md);
+            font-style: italic;
+        }
+        
+        .testimonial-content::before {
+            content: '\201C';
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: var(--spacing-md);
+        }
+        
+        .testimonial-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .testimonial-info h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .testimonial-info p {
+            color: var(--secondary-color);
+            font-size: 0.9rem;
+            margin: 0;
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--secondary-color);
+            color: var(--white);
+            text-align: center;
+        }
+        
+        .cta-content {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .cta p {
+            margin-bottom: var(--spacing-xl);
+            font-size: 1.1rem;
+        }
+        
+        /* Stats Section */
+        .stats {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--bg-color);
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-lg);
+            text-align: center;
+        }
+        
+        .stat-item {
+            background-color: var(--white);
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--main-color);
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        /* How it Works Section */
+        .how-it-works {
+            padding: var(--spacing-xl) 0;
+            background-color: var(--white);
+        }
+        
+        .steps-container {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .step {
+            display: flex;
+            margin-bottom: var(--spacing-xl);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step:last-child {
+            margin-bottom: 0;
+        }
+        
+        .step-number {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background-color: var(--main-color);
+            color: var(--white);
+            border-radius: 50%;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-right: var(--spacing-lg);
+        }
+        
+        .step-content {
+            padding-top: 10px;
+        }
+        
+        .steps-line {
+            position: absolute;
+            left: 30px;
+            top: 60px;
+            bottom: 60px;
+            width: 2px;
+            background-color: var(--secondary-color);
+            z-index: 0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            padding: var(--spacing-xl) 0;
+        }
+        
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--spacing-xl);
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            display: inline-block;
+        }
+        
+        .footer-social {
+            display: flex;
+            margin-top: var(--spacing-md);
+        }
+        
+        .footer-social a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            margin-right: var(--spacing-md);
+            transition: var(--transition);
+        }
+        
+        .footer-social a:hover {
+            background-color: var(--main-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-links h3 {
+            font-size: 1.2rem;
+            margin-bottom: var(--spacing-lg);
+            position: relative;
+            padding-bottom: var(--spacing-sm);
+        }
+        
+        .footer-links h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--main-color);
+        }
+        
+        .footer-links ul {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .footer-links a {
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--main-color);
+            padding-left: var(--spacing-sm);
+        }
+        
+        .footer-contact li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .footer-contact i {
+            margin-right: var(--spacing-sm);
+            color: var(--main-color);
+            font-size: 1.1rem;
+            margin-top: 5px;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: var(--spacing-lg);
+            margin-top: var(--spacing-lg);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: var(--white);
+            margin: 10% auto;
+            padding: var(--spacing-lg);
+            border-radius: var(--border-radius);
+            max-width: 500px;
+            width: 90%;
+            position: relative;
+            transform: translateY(-50px);
+            transition: transform 0.3s ease;
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            position: absolute;
+            right: var(--spacing-lg);
+            top: var(--spacing-lg);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--main-color);
+        }
+        
+        .modal-title {
+            margin-bottom: var(--spacing-lg);
+            color: var(--main-color);
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: var(--spacing-md);
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: var(--spacing-sm);
+            font-weight: 500;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--border-radius);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .contact-form textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--main-color);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+            z-index: 99;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+            bottom: 30px;
+        }
+        
+        .back-to-top:hover {
+            background-color: #8a3526;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-content {
+                flex-direction: column;
+            }
+            
+            .hero-text {
+                margin-right: 0;
+                margin-bottom: var(--spacing-xl);
+                text-align: center;
+            }
+            
+            .steps-line {
+                left: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .navbar {
+                position: relative;
+            }
+            
+            .mobile-toggle {
+                display: block;
+            }
+            
+            .nav-links {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: var(--white);
+                flex-direction: column;
+                text-align: center;
+                padding: var(--spacing-md) 0;
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateY(-150%);
+                transition: transform 0.3s ease;
+                z-index: 99;
+            }
+            
+            .nav-links.active {
+                transform: translateY(0);
+            }
+            
+            .nav-links li {
+                margin: var(--spacing-md) 0;
+            }
+            
+            .hero-text h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .steps-container {
+                padding-left: var(--spacing-lg);
+            }
+            
+            .step {
+                flex-direction: column;
+            }
+            
+            .step-number {
+                margin-bottom: var(--spacing-md);
+                margin-right: 0;
+            }
+            
+            .steps-line {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <a href="#" class="logo"><i class="fab fa-facebook"></i> Meta Reklam</a>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#features">Avantajlar</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#testimonials">Referanslar</a></li>
+                    <li><a href="#contact" class="btn">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-aos="fade-right" data-aos-duration="1000">
+                    <h1>Meta Reklamlarıyla İşinizi Büyütün</h1>
+                    <p>Facebook ve Instagram reklamlarıyla hedef kitlenize ulaşın ve dönüşüm oranlarınızı arttırın. Profesyonel Meta reklamcılık hizmetlerimizle rakiplerinizin önüne geçin.</p>
+                    <a href="#" class="btn btn-large" id="ctaHero">Ücretsiz Toplantı Talep Et</a>
+                </div>
+                <div class="hero-image" data-aos="fade-left" data-aos-duration="1000">
+                    <img src="https://placehold.co/600x400/dde2e6/627b6f?text=Meta+Advertising" alt="Meta Reklamları">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Neden Meta Reklamları?</h2>
+                <p>Modern reklamcılığın gücünü işinize entegre edin</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Hassas Hedefleme</h3>
+                    <p>Meta platformları, demografik, ilgi alanları ve davranışlara göre hedefleme yaparak doğru kitle ile etkileşime geçmenizi sağlar.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Ölçülebilir Sonuçlar</h3>
+                    <p>Reklam performansınızı gerçek zamanlı izleyerek kampanyalarınızı sürekli optimize edebilirsiniz.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <h3>Maliyet Etkinliği</h3>
+                    <p>Diğer reklam kanallarına kıyasla daha düşük maliyetle daha yüksek dönüşüm oranları elde etme fırsatı.</p>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Geniş Erişim</h3>
+                    <p>Facebook ve Instagram'da milyarlarca aktif kullanıcıya erişerek marka bilinirliğinizi artırın.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="stat-number" id="stat1">2.9+</div>
+                    <p>Milyar Meta Kullanıcısı</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="stat-number" id="stat2">98%</div>
+                    <p>Müşteri Memnuniyeti</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="stat-number" id="stat3">300%</div>
+                    <p>Ortalama ROI Artışı</p>
+                </div>
+                <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="stat-number" id="stat4">150+</div>
+                    <p>Başarılı Kampanya</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Meta Reklam Hizmetlerimiz</h2>
+                <p>İşinizin ihtiyaçlarına özel reklam çözümleri</p>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-image" style="background-image: url('https://placehold.co/800x400/dde2e6/627b6f?text=Facebook+Ads')"></div>
+                <div class="service-content">
+                    <h3 class="service-title">Facebook Reklam Yönetimi</h3>
+                    <p>Facebook reklamlarıyla potansiyel müşterilerinize ulaşın. Stratejik hedefleme, yaratıcı içerikler ve sürekli optimizasyon ile kampanyalarınızdan maksimum verim alın.</p>
+                    <p><strong>Hizmet İçeriği:</strong></p>
+                    <ul>
+                        <li>Kampanya stratejisi oluşturma</li>
+                        <li>Hedef kitle analizi ve segmentasyon</li>
+                        <li>Reklam metni ve görselleri hazırlama</li>
+                        <li>A/B testleri ile optimizasyon</li>
+                        <li>Düzenli raporlama ve performans analizi</li>
+                    </ul>
+                    <a href="#" class="btn" id="ctaFacebook">Ücretsiz Toplantı Talep Et</a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-image" style="background-image: url('https://placehold.co/800x400/dde2e6/627b6f?text=Instagram+Ads')"></div>
+                <div class="service-content">
+                    <h3 class="service-title">Instagram Reklam Yönetimi</h3>
+                    <p>Instagram'ın görsel dünyasında markanızı öne çıkarın. Hikayeler, akış reklamları ve keşfet bölümü ile potansiyel müşterilerinizin dikkatini çekin.</p>
+                    <p><strong>Hizmet İçeriği:</strong></p>
+                    <ul>
+                        <li>Etkileyici görsel ve video içerikler</li>
+                        <li>Hikaye reklamları ve kaydırmalı gönderiler</li>
+                        <li>Influencer işbirliği stratejileri</li>
+                        <li>Etkileşim odaklı kampanyalar</li>
+                        <li>Hashtag stratejisi ve trend takibi</li>
+                    </ul>
+                    <a href="#" class="btn" id="ctaInstagram">Ücretsiz Toplantı Talep Et</a>
+                </div>
+            </div>
+            <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-image" style="background-image: url('https://placehold.co/800x400/dde2e6/627b6f?text=Meta+Audience+Network')"></div>
+                <div class="service-content">
+                    <h3 class="service-title">Meta Audience Network</h3>
+                    <p>Meta'nın geniş reklam ağı ile reklamlarınızı Facebook ve Instagram dışındaki uygulamalara ve web sitelerine taşıyın.</p>
+                    <p><strong>Hizmet İçeriği:</strong></p>
+                    <ul>
+                        <li>Genişletilmiş hedef kitle erişimi</li>
+                        <li>Farklı mecralarda tutarlı marka mesajları</li>
+                        <li>Çeşitli reklam formatları ile esneklik</li>
+                        <li>Platforma özel optimizasyon stratejileri</li>
+                        <li>Cross-platform analitik ve raporlama</li>
+                    </ul>
+                    <a href="#" class="btn" id="ctaAudience">Ücretsiz Toplantı Talep Et</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it Works Section -->
+    <section class="how-it-works" id="how">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Nasıl Çalışıyoruz?</h2>
+                <p>Sizinle birlikte başarıya ulaşmak için izlediğimiz yol</p>
+            </div>
+            <div class="steps-container" data-aos="fade-up">
+                <div class="steps-line"></div>
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Keşif ve Strateji</h3>
+                        <p>İşletmenizi, hedeflerinizi ve hedef kitlenizi derinlemesine analiz ederiz. Markanıza özel bir Meta reklam stratejisi geliştiririz.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Kampanya Oluşturma</h3>
+                        <p>Stratejimize uygun yaratıcı içerikler, görseller ve metinler hazırlayarak kampanyalarınızı kurarız. Hedef kitle segmentasyonunu ve teklif stratejinizi optimize ederiz.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Uygulama ve Optimizasyon</h3>
+                        <p>Kampanyalarınızı hayata geçirir ve sürekli izleriz. Veri odaklı kararlarla sürekli iyileştirmeler yapar, A/B testleri uygularız.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="400">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Raporlama ve Analiz</h3>
+                        <p>Düzenli ve detaylı raporlar sunarız. Kampanya performansını, ROI'yi ve diğer önemli metrikleri analiz ederek gelecek stratejilerinize yön veririz.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Müşteri Yorumları</h2>
+                <p>Başarı hikayelerimizden bazıları</p>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-content">
+                        <p>Meta Reklam ekibi ile çalışmaya başladıktan sonra e-ticaret mağazamızın satışları %70 arttı. Profesyonel yaklaşımları ve sürekli optimizasyonları sayesinde reklam bütçemizden maksimum verim alıyoruz.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://placehold.co/100x100/dde2e6/627b6f?text=A" alt="Ali Yılmaz">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Ali Yılmaz</h4>
+                            <p>E-ticaret Girişimcisi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-content">
+                        <p>Lokal bir restoran olarak hedef kitleye ulaşmak bizim için çok önemliydi. Meta Reklam'ın lokasyon bazlı hedefleme stratejileri sayesinde rezervasyonlarımızda %50 artış yaşadık.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://placehold.co/100x100/dde2e6/627b6f?text=B" alt="Beyza Kaya">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Beyza Kaya</h4>
+                            <p>Restoran Sahibi</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-content">
+                        <p>Yeni lansmanını yaptığımız mobil uygulamamız için Meta Reklam ekibiyle çalıştık. İlk ayda 10.000'den fazla indirme elde ettik ve müşteri edinme maliyetimiz yarıya düştü.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">
+                            <img src="https://placehold.co/100x100/dde2e6/627b6f?text=C" alt="Cem Özkan">
+                        </div>
+                        <div class="testimonial-info">
+                            <h4>Cem Özkan</h4>
+                            <p>Teknoloji Startup Kurucusu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <div class="container">
+            <div class="cta-content" data-aos="zoom-in">
+                <h2>Markanızı Bir Sonraki Seviyeye Taşımaya Hazır mısınız?</h2>
+                <p>Meta reklamları ile potansiyel müşterilerinize ulaşın, satışlarınızı artırın ve işinizi büyütün. Hemen ücretsiz stratejik toplantı talep edin!</p>
+                <a href="#" class="btn" id="ctaMain">Ücretsiz Toplantı Talep Et</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="footer-logo">Meta Reklam</a>
+                    <p>Meta platformlarında reklamlarınızı yöneterek işinizi büyütmenize yardımcı oluyoruz. Uzman ekibimizle yanınızdayız.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul>
+                        <li><a href="#home">Ana Sayfa</a></li>
+                        <li><a href="#features">Avantajlar</a></li>
+                        <li><a href="#services">Hizmetler</a></li>
+                        <li><a href="#how">Nasıl Çalışıyoruz</a></li>
+                        <li><a href="#testimonials">Referanslar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h3>Hizmetler</h3>
+                    <ul>
+                        <li><a href="#">Facebook Reklamları</a></li>
+                        <li><a href="#">Instagram Reklamları</a></li>
+                        <li><a href="#">Meta Audience Network</a></li>
+                        <li><a href="#">Remarketing Kampanyaları</a></li>
+                        <li><a href="#">Dönüşüm Optimizasyonu</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>İletişim</h3>
+                    <ul>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Bağdat Caddesi No:123, Kadıköy, İstanbul</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+90 212 345 67 89</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@metareklam.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Meta Reklam. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal" id="contactModal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeModal">&times;</span>
+            <h2 class="modal-title">Ücretsiz Toplantı Talep Et</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Adınız Soyadınız</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Şirket Adı</label>
+                    <input type="text" id="company" name="company" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-posta Adresiniz</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Telefon Numaranız</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mesajınız (İsteğe Bağlı)</label>
+                    <textarea id="message" name="message"></textarea>
+                </div>
+                <button type="submit" class="btn">Toplantı Talep Et</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- JS Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease',
+            once: true
+        });
+        
+        // Mobile Navigation
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        
+        // Modal Functions
+        const modal = document.getElementById('contactModal');
+        const closeModal = document.getElementById('closeModal');
+        const ctaButtons = [
+            document.getElementById('ctaHero'),
+            document.getElementById('ctaFacebook'),
+            document.getElementById('ctaInstagram'),
+            document.getElementById('ctaAudience'),
+            document.getElementById('ctaMain')
+        ];
+        
+        ctaButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.classList.add('show');
+            });
+        });
+        
+        closeModal.addEventListener('click', () => {
+            modal.classList.remove('show');
+        });
+        
+        window.addEventListener('click', (e) => {
+            if (e.target == modal) {
+                modal.classList.remove('show');
+            }
+        });
+        
+        // Contact Form Submission
+        const contactForm = document.getElementById('contactForm');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Here you would normally send the form data to your server
+            
+            // For demonstration purposes, we'll just show an alert
+            alert('Toplantı talebiniz alındı! En kısa sürede sizinle iletişime geçeceğiz.');
+            modal.classList.remove('show');
+            contactForm.reset();
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('backToTop');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth Scrolling for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (navLinks.classList.contains('active')) {
+                        navLinks.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Stats Animation
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateStats();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        observer.observe(document.querySelector('.stats'));
+        
+        function animateStats() {
+            const stats = [
+                { id: 'stat1', target: '2.9+', prefix: '', suffix: '+' },
+                { id: 'stat2', target: '98', prefix: '', suffix: '%' },
+                { id: 'stat3', target: '300', prefix: '', suffix: '%' },
+                { id: 'stat4', target: '150', prefix: '', suffix: '+' }
+            ];
+            
+            stats.forEach(stat => {
+                const el = document.getElementById(stat.id);
+                let current = 0;
+                const target = parseInt(stat.target);
+                const increment = Math.ceil(target / 50);
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        current = target;
+                        clearInterval(timer);
+                    }
+                    el.textContent = `${stat.prefix}${current}${stat.suffix}`;
+                }, 30);
+            });
+        }
+    </script>
+</body>
+</html>
+</craftcontent>
